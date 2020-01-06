@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Insert form</title>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <a class="navbar-brand" href="/#/">HOME</a>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="/create/">Insert</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/retrieve/">Retrieve</a>
+    </li>
+  </ul>
+</nav>
+    <div class="container" style="padding: 10px 25px; margin-top: 80px;">
+            <div class="row1">
+                <div class="offset-md-3 col-md-6">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <h2 >Enter your Details:</h2><br>
+                        <label>Enter Product Id</label>
+                        <input type="number" name="pid" class="form-control" required>
+                        <label>Enter Product Name</label>
+                        <input type="text" name="pname" class="form-control" required>
+                        <label>Enter Product Cost</label>
+                        <input type="number" name="pcost" class="form-control" required>
+                        <label>Enter Product class</label>
+                        <input type="text" name="pclass" class="form-control" required>
+                        <label>No Of Product</label>
+                        <input type="number" name="nop" class="form-control" required>
+                        <label>Manufacturing date</label>
+                        <input type="date" name="mdate" class="form-control" required>
+                        <label>Expiry date</label>
+                        <input type="date" name="edate" class="form-control" required>
+                        <label>Customer name</label>
+                        <input type="text" name="cname" class="form-control">
+                        <label>Enter mobile no</label>
+                        <input type="number" name="mobile" class="form-control" required>
+                        <label>Enter Email</label>
+                        <input type="email" name="email" class="form-control" required>
+
+
+                        <center>
+                        <input type="submit" value="submit" class="btn btn-success">
+                        <input type="reset" value="clear" class="btn btn-danger">
+                        </center>
+                    </form>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
